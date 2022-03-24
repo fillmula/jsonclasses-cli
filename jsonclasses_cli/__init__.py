@@ -5,6 +5,7 @@ from .new import new as execute_new
 from .upgrade import upgrade as execute_upgrade
 from .package import package as execute_package
 from .console import console as execute_console
+from .run import run as execute_run
 from .version import version
 
 
@@ -62,6 +63,11 @@ def package(lang: str, file: str | None):
     dest = Path(getcwd())
     app_file = dest / file
     execute_package(dest, app_file, lang)
+
+
+@app.command(help='Run the server.')
+def run():
+    execute_run()
 
 
 if __name__ == '__main__':
