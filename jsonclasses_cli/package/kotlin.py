@@ -3,4 +3,4 @@ from jsonclasses.cgraph import CGraph
 
 
 def kotlin(dest: Path, cgraph: CGraph, silent: bool = False):
-    print("KOTLIN")
+    print("KOTLIN is not supported yet.")
